@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat&display=swap");
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat';
+  color: white;
+}
+
+.navigation {
+  background: -webkit-gradient(linear, left top, right bottom, from(#cb356b), to(#bd3f32));
+  background: linear-gradient(to bottom right, #cb356b, #bd3f32);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-box-shadow: 0 1px 15px 0 black;
+          box-shadow: 0 1px 15px 0 black;
+  position: relative;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1%;
+}
+
+.navigation .logo {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.navigation .logo img {
+  height: 9vmin;
+}
+
+.navigation ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.navigation ul li {
+  font-size: 4vmin;
+  position: relative;
+}
+
+.navigation ul li::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  width: 0;
+  outline: 1px solid;
+  outline-color: transparent;
+  -webkit-transition: width .3s, outline-color .3s;
+  transition: width .3s, outline-color .3s;
+}
+
+.navigation ul li:hover::before {
+  width: 100%;
+  outline-color: white;
+}
+
+.navigation ul li a {
+  text-decoration: none;
+}
+
+.welcomeSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  background-image: url("./images/welcomeSectionBackground.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.welcomeSection h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  text-shadow: 5px 5px 4px black;
+}
+
+.welcomeSection h1 span {
+  font-family: 'Lobster';
+}
+
+.welcomeSection .title {
+  display: block;
+}
+/*# sourceMappingURL=style.css.map */
