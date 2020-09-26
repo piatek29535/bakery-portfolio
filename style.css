@@ -25,6 +25,7 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 1%;
+  z-index: 1;
 }
 
 .navigation .logo {
@@ -94,11 +95,24 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
   height: 100vh;
   background-image: url("./images/welcomeSectionBackground.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.welcomeSection::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.welcomeSection * {
+  position: relative;
 }
 
 .welcomeSection h1 {
@@ -110,7 +124,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
-  text-shadow: 5px 5px 4px black;
+  text-shadow: 0px 0px 15px black;
 }
 
 .welcomeSection h1 span {
