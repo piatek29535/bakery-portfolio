@@ -101,6 +101,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  font-size: 2vmax;
 }
 
 .welcomeSection::before {
@@ -131,7 +132,67 @@
   font-family: 'Lobster';
 }
 
-.welcomeSection .title {
-  display: block;
+.welcomeSection .title .first_word {
+  position: relative;
+  -webkit-animation: slideLeft 3s;
+          animation: slideLeft 3s;
+}
+
+.welcomeSection .title .second_word {
+  position: relative;
+  -webkit-animation: slideRight 3s;
+          animation: slideRight 3s;
+}
+
+.welcomeSection p {
+  padding-top: 3%;
+}
+
+@-webkit-keyframes slideLeft {
+  from {
+    right: 100px;
+    opacity: 0;
+  }
+  to {
+    right: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    right: 100px;
+    opacity: 0;
+  }
+  to {
+    right: 0px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slideRight {
+  from {
+    left: 100px;
+    opacity: 0;
+  }
+  to {
+    left: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes slideRight {
+  from {
+    left: 100px;
+    opacity: 0;
+  }
+  to {
+    left: 0px;
+    opacity: 1;
+  }
+}
+
+.offer {
+  height: 100vh;
 }
 /*# sourceMappingURL=style.css.map */

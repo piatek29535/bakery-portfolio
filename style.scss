@@ -77,6 +77,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    font-size: 2vmax;
     
     &::before{
         content:'';
@@ -102,7 +103,49 @@
     }
 
     .title{
-        display:block;
+        
+        .first_word{
+            position:relative;
+            animation: slideLeft 3s;
+        }
+        .second_word{
+            position:relative;
+            animation: slideRight 3s;
+        }
+    }
+
+    p{
+        padding-top: 3%;
     }
     
+}
+
+// Welcome section animation
+
+@keyframes slideLeft{
+    from{
+        right:100px;
+        opacity: 0;
+    }
+    to{
+        right:0px;
+        opacity:1;
+    }
+}
+
+@keyframes slideRight{
+    from{
+        left:100px;
+        opacity:0;
+    }
+    to{
+        left:0px;
+        opacity:1;
+    }
+}
+
+// Offer section
+
+.offer{
+    height:100vh;
 }
