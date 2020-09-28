@@ -5,14 +5,13 @@
     margin:0;
     padding:0;
     font-family: 'Montserrat';
-    color:white;    
 }
 
 // Navigation
 
 .navigation{
-    background: linear-gradient(to bottom right, #cb356b, #bd3f32); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    box-shadow: 0 1px 15px 0 black;
+    background: linear-gradient(to right, #f12711, #f5af19); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    box-shadow: 0 1px 15px 0 #f5af19;
     position:relative;
     top:0;
     right:0;
@@ -58,6 +57,7 @@
             }
 
             a{
+                color:white;
                 text-decoration:none;
             }
         }
@@ -78,6 +78,7 @@
     background-repeat: no-repeat;
     background-position: center;
     font-size: 2vmax;
+    color:white;
     
     &::before{
         content:'';
@@ -147,5 +148,60 @@
 // Offer section
 
 .offer{
+
+    .offer_section_header{
+        font-size: 2rem;
+        text-align: center;
+        margin:4% 0 8%;
+    }
+
+    section:nth-child(odd){
+        flex-direction: row-reverse;
+        
+        img{
+            margin:0 0 0 4%;
+            border-radius: 0 4%;
+        }
+
+        .section_description{
+            direction: rtl;
+        }
+    }
+
+    section{
+        margin: 5%;
+        display:flex;
+        
+        img{
+            position:relative;
+            flex:1;
+            width:150px;
+            align-self: stretch;
+            object-fit: cover;
+            margin:0 4% 0 0;
+            border-radius: 4% 0;
+            filter: grayscale(100%);
+            transition:filter .3s;
+        }
+
+        img:hover{
+            filter:grayscale(0);
+        }
+
+        .section_description{
+            flex:1;
+
+            h1{
+                margin-bottom: 5%;
+            }
+        }
+    }
+}
+
+// Products section
+.products{
     height:100vh;
+    background-color: tomato;
+
+    
 }

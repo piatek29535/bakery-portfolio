@@ -5,15 +5,14 @@
   margin: 0;
   padding: 0;
   font-family: 'Montserrat';
-  color: white;
 }
 
 .navigation {
-  background: -webkit-gradient(linear, left top, right bottom, from(#cb356b), to(#bd3f32));
-  background: linear-gradient(to bottom right, #cb356b, #bd3f32);
+  background: -webkit-gradient(linear, left top, right top, from(#f12711), to(#f5af19));
+  background: linear-gradient(to right, #f12711, #f5af19);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  -webkit-box-shadow: 0 1px 15px 0 black;
-          box-shadow: 0 1px 15px 0 black;
+  -webkit-box-shadow: 0 1px 15px 0 #f5af19;
+          box-shadow: 0 1px 15px 0 #f5af19;
   position: relative;
   top: 0;
   right: 0;
@@ -78,6 +77,7 @@
 }
 
 .navigation ul li a {
+  color: white;
   text-decoration: none;
 }
 
@@ -102,6 +102,7 @@
   background-repeat: no-repeat;
   background-position: center;
   font-size: 2vmax;
+  color: white;
 }
 
 .welcomeSection::before {
@@ -192,7 +193,73 @@
   }
 }
 
-.offer {
+.offer .offer_section_header {
+  font-size: 2rem;
+  text-align: center;
+  margin: 4% 0 8%;
+}
+
+.offer section:nth-child(odd) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.offer section:nth-child(odd) img {
+  margin: 0 0 0 4%;
+  border-radius: 0 4%;
+}
+
+.offer section:nth-child(odd) .section_description {
+  direction: rtl;
+}
+
+.offer section {
+  margin: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.offer section img {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 150px;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 0 4% 0 0;
+  border-radius: 4% 0;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  -webkit-transition: -webkit-filter .3s;
+  transition: -webkit-filter .3s;
+  transition: filter .3s;
+  transition: filter .3s, -webkit-filter .3s;
+}
+
+.offer section img:hover {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+
+.offer section .section_description {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.offer section .section_description h1 {
+  margin-bottom: 5%;
+}
+
+.products {
   height: 100vh;
+  background-color: tomato;
 }
 /*# sourceMappingURL=style.css.map */
