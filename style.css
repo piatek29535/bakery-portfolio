@@ -110,7 +110,7 @@
   position: absolute;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .welcomeSection * {
@@ -259,7 +259,51 @@
 }
 
 .products {
-  height: 100vh;
-  background-color: tomato;
+  background-color: #f12711;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.products .products_section_header {
+  text-align: center;
+  padding: 3% 0 5%;
+}
+
+.products .productsGrid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  row-gap: 40px;
+}
+
+.products .productsGrid .singleProductDiv {
+  max-width: 300px;
+  max-height: 300px;
+  position: relative;
+}
+
+.products .productsGrid .singleProductDiv img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.products .productsGrid .singleProductDiv::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: .3;
 }
 /*# sourceMappingURL=style.css.map */

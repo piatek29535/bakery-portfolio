@@ -85,7 +85,7 @@
         position:absolute;
         height:100%;
         width:100%;
-        background-color: rgba(0, 0, 0, .3);
+        background-color: rgba(0, 0, 0, .5);
     }
 
     *{
@@ -199,9 +199,43 @@
 }
 
 // Products section
-.products{
-    height:100vh;
-    background-color: tomato;
 
+.products{
+    background-color: #f12711;
+    color:white;
+    display:flex;
+    flex-direction: column;
+
+    .products_section_header{
+        text-align: center;
+        padding:3% 0 5%;
+    }
+
+    .productsGrid{
+        display:grid;
+        grid-template-columns: auto auto auto;
+        justify-content: space-evenly;
+        row-gap: 40px;
+
+        .singleProductDiv{
+            max-width:300px;
+            max-height:300px;
+            position:relative;
     
+            img{
+                width:100%;
+                object-fit: cover;
+            }
+
+            &::before{
+                content:'';
+                position:absolute;
+                width:100%;
+                height:100%;
+                background-color:black;
+                opacity:.3;
+            }
+        }
+    }
+
 }
