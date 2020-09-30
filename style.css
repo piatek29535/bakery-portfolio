@@ -284,26 +284,114 @@
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   row-gap: 40px;
+  margin-bottom: 5%;
 }
 
 .products .productsGrid .singleProductDiv {
-  max-width: 300px;
-  max-height: 300px;
+  width: 300px;
+  height: 200px;
   position: relative;
 }
 
 .products .productsGrid .singleProductDiv img {
+  height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.products .productsGrid .singleProductDiv::before {
-  content: '';
+.products .productsGrid .singleProductDiv .productDescription {
   position: absolute;
+  background-color: rgba(0, 0, 0, 0);
   width: 100%;
   height: 100%;
-  background-color: black;
-  opacity: .3;
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  -webkit-transition: background-color .3s ease-in-out, opacity .3s ease-in-out, -webkit-transform .3s ease-in-out;
+  transition: background-color .3s ease-in-out, opacity .3s ease-in-out, -webkit-transform .3s ease-in-out;
+  transition: background-color .3s ease-in-out, opacity .3s ease-in-out, transform .3s ease-in-out;
+  transition: background-color .3s ease-in-out, opacity .3s ease-in-out, transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+}
+
+.products .productsGrid .singleProductDiv:hover .productDescription {
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.contact {
+  color: white;
+  padding: 10% 5% 3%;
+  background-color: #160C28;
+  background: -webkit-gradient(linear, left bottom, left top, from(#160C28), color-stop(70%), to(#f12711));
+  background: linear-gradient(to top, #160C28, 70%, #f12711);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact > h1 {
+  font-size: 5em;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.contact .formAndCreditsWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 300px;
+}
+
+.contact .formAndCreditsWrapper .contactForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-right: 1px solid white;
+}
+
+.contact .formAndCreditsWrapper .contactForm input:not([type="submit"]) {
+  width: 90%;
+  height: 50px;
+  padding: 1%;
+  color: blue;
+}
+
+.contact .formAndCreditsWrapper .authorCredits {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 /*# sourceMappingURL=style.css.map */
