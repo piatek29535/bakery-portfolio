@@ -7,12 +7,16 @@
     font-family: 'Montserrat';
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 // Navigation
 
 .navigation{
     background: linear-gradient(to right, #f12711, #f5af19); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     box-shadow: 0 1px 15px 0 #f5af19;
-    position:relative;
+    position:fixed;
     top:0;
     right:0;
     left:0;
@@ -38,6 +42,7 @@
         flex:1;
 
         li{
+            cursor: pointer;
             font-size: 4vmin;
             position:relative;
 
@@ -148,6 +153,8 @@
 // Offer section
 
 .offer{
+
+    visibility: hidden;
 
     .offer_section_header{
         font-size: 2rem;
